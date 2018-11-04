@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const TriviaControls = props => {
 	// let gameOptions = 
 	return (

@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import TriviaCard from '../TriviaCard/TriviaCard'
+import { Link } from 'react-router-dom';
+import TriviaCard from '../TriviaCard/TriviaCard';
+import './Game.css';
 
 class Game extends Component {
 	displayQuestions = () => {
-		// if (this.props.questions.results.length > 1) {
+		if (this.state.pathname === '/game') {
 		return this.props.questions.results.map(result => {
 			return <TriviaCard result={result} />
 		})
-	  // } 
+	  } 
 	}
 
 	render() {
@@ -16,6 +18,7 @@ class Game extends Component {
 		return (
 			<div>
 				{this.displayQuestions()}
+				<button>Submit</button>
 			</div>
 		)
 	} else {

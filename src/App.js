@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { NavLink, Route, withRouter } from 'react-router-dom';
+import { NavLink, Route, withRouter, Switch } from 'react-router-dom';
 import TriviaControls from './components/TriviaControls/TriviaControls.js';
 import { fetchData } from './utilities/apiCalls.js';
 import { triviaCleaner } from './utilities/helper.js';
 import { connect } from 'react-redux';
 import { addQuestions } from './actions';
 import Game from './components/Game/Game.js';
+import Home from './components/Home/Home.js'
 
 class App extends Component {
   async componentDidMount() {
@@ -24,15 +24,18 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>ACTIVIST TRIVIA</h1>
+          <NavLink to='/' className='button'>Home</NavLink>
+          <NavLink to='/game/' className='button'>Politics</NavLink>
         </header>
-        <main>
-          <Route exact path='/game' component={Game} />
+        <main>         
+          <Route exact path='/politics' render={() => <Game 
+            questions={ questions }
+            onClick={(event) => this.fetchCategory(event)}
+          }/>
           <button id='24' onClick={(event) => this.fetchCategory(event)}>Politics</button> 
           <button id='27' onClick={(event) => this.fetchCategory(event)}>Animals</button>
           <button id='17' onClick={(event) => this.fetchCategory(event)}>Environment</button>
         </main>
-        <Game />
       </div>
     );
   }
