@@ -8,7 +8,6 @@ class Game extends Component {
 	displayQuestions = () => {
 		// if (this.props.pathname === '/politics') {
 		return this.props.questions.results.map(result => {
-			console.log(result)
 			return <TriviaCard result={result}/>
 		})
 	  // } 

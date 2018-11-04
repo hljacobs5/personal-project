@@ -6,7 +6,12 @@ const TriviaCard = (props) => {
 	const answers = [props.result.correct_answer, ...props.result.incorrect_answers]
 	const buttons = answers.map(answer => {
 				console.log(answer)
-				return <input type='radio' value={answer} />
+				return (
+					<div>
+					   <input type='radio' id={answer} value={answer} /> 
+					   <label for={answer}>{answer}</label>
+					</div>
+					)
 			})
 
 	return (
