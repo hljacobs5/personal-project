@@ -7,7 +7,8 @@ import { triviaCleaner } from './utilities/helper.js';
 import { connect } from 'react-redux';
 import { addQuestions } from './actions';
 import Game from './components/Game/Game.js';
-import Home from './components/Home/Home.js'
+import Home from './components/Home/Home.js';
+import NavBar from './components/NavBar/NavBar.js';
 
 class App extends Component {
   async componentDidMount() {
@@ -15,7 +16,7 @@ class App extends Component {
     triviaCleaner(data)
   }
 
-  async fetchCategory(event) {
+ fetchCategory = async (event) => {
     const data = await fetchData(event.target.id)
     this.props.addQuestions(data)
   }
@@ -24,25 +25,24 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <NavLink to='/' className='button'>Home</NavLink>
-          <NavLink to='/game/' className='button'>Politics</NavLink>
+          <NavBar fetchCategory={ this.fetchCategory }/>
         </header>
         <main>         
           <Route exact path='/politics' render={() => <Game 
-            questions={ questions }
-            onClick={(event) => this.fetchCategory(event)}
+            questions={ this.props.questions } />
           }/>
-          <button id='24' onClick={(event) => this.fetchCategory(event)}>Politics</button> 
-          <button id='27' onClick={(event) => this.fetchCategory(event)}>Animals</button>
-          <button id='17' onClick={(event) => this.fetchCategory(event)}>Environment</button>
         </main>
       </div>
     );
   }
 }
 
-export const mapDispatchToProps = (dispatch) => ({
-  addQuestions: (questions) => dispatch(addQuestions(questions))
+export const mapStateToProps = (state) => ({
+  questions: state.questions
 })
 
-export default connect(null, mapDispatchToProps)(App);
+export const mapDispatchToProps = (dispatch) => ({
+  addQuestions: (questions) => dispatch(addQuestions(questions)),
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

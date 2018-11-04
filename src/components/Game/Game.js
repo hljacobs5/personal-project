@@ -6,11 +6,12 @@ import './Game.css';
 
 class Game extends Component {
 	displayQuestions = () => {
-		if (this.state.pathname === '/game') {
+		// if (this.props.pathname === '/politics') {
+			console.log(this.props.questions)
 		return this.props.questions.results.map(result => {
 			return <TriviaCard result={result} />
 		})
-	  } 
+	  // } 
 	}
 
 	render() {
