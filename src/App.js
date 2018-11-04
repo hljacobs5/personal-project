@@ -25,10 +25,17 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <NavBar fetchCategory={ this.fetchCategory }/>
+          <h1>Activist Trivia</h1>
         </header>
+          <NavBar fetchCategory={ this.fetchCategory }/>
         <main>         
           <Route exact path='/politics' render={() => <Game 
+            questions={ this.props.questions } />
+          }/>
+          <Route exact path='/animals' render={() => <Game
+            questions={ this.props.questions } />
+          }/>
+          <Route exact path='/environment' render={() => <Game
             questions={ this.props.questions } />
           }/>
         </main>
