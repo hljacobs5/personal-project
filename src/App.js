@@ -26,6 +26,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1>Activist Trivia</h1>
+          <Home />
         </header>
           <NavBar fetchCategory={ this.fetchCategory }/>
         <main>         

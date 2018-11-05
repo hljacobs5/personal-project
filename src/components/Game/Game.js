@@ -11,9 +11,15 @@ class Game extends Component {
 		}) 
 	}
 
-	// handleSubmit() {
+	handleSubmit() {
+		const correctAnswer = this.props.questions.results.correct_answer
+		if () {
 
-	// }
+		this.setState({ score: ++})
+		} else {
+			null
+		}
+	}
 
 	render() {
 		if (this.props.questions.results) {
@@ -21,20 +27,20 @@ class Game extends Component {
 			<div>
 				{this.displayQuestions()}
 				<button onClick={this.handleSubmit}>Submit</button>
+				<ScorePage score={this.state.score}/>
 			</div>
 		)
 	} else {
 		return (
-			<div>
-				<h3>Not loaded</h3>
-			</div>
+			null
 		)
 	}
   } 
 }
 
 export const mapStateToProps = (state) => ({
-	questions: state.questions
+	questions: state.questions,
+	score: state.score
 })
 
 export default connect(mapStateToProps)(Game);

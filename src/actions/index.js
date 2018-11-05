@@ -3,3 +3,7 @@ export const addQuestions = questions => ({
 	questions
 })
 
+export const addScore = score => ({
+	type: 'ADD_SCORE',
+	score
+})
