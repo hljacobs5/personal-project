@@ -12,10 +12,6 @@ class TriviaCard extends Component {
 
 	handleChecked = (changeEvent) => {
 		this.setState({ isClicked: changeEvent.target.value })
-
-		// if (this.state.isClicked) {
-		// 	this
-		// }
 	}
 
 	render() {
@@ -35,8 +31,7 @@ class TriviaCard extends Component {
 			})
 
 	return (
-		<div>{/*
-			<Link to={`/${props.id}`} className='category'></Link>*/}
+		<div>
 			<h2>{this.props.result.question}</h2>
 			<div className='buttons'>{buttons}</div>	
 		</div>

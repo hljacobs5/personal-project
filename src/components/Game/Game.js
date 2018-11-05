@@ -6,11 +6,9 @@ import './Game.css';
 
 class Game extends Component {
 	displayQuestions = () => {
-		// if (this.props.pathname === '/politics') {
 		return this.props.questions.results.map(result => {
 			return <TriviaCard result={result}/>
-		})
-	  // } 
+		}) 
 	}
 
 	// handleSubmit() {
@@ -36,8 +34,7 @@ class Game extends Component {
 }
 
 export const mapStateToProps = (state) => ({
-	questions: state.questions,
-	answers: state.answers
+	questions: state.questions
 })
 
 export default connect(mapStateToProps)(Game);
