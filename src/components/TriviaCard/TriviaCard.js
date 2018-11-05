@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './TriviaCard.css';
 import { connect } from 'react-redux';
+import { cleanAnswers } from '../../utilities/helper.js';
 
 class TriviaCard extends Component {
 	constructor(props) {
@@ -15,17 +16,20 @@ class TriviaCard extends Component {
 	}
 
 	render() {
-		const answers = [this.props.result.correct_answer, ...this.props.result.incorrect_answers]
+		const correctAnswer = this.props.result.correct_answer
+		const incorrectAnswers = this.props.result.incorrect_answers
+		const answers = cleanAnswers(correctAnswer, incorrectAnswers)
+		console.log(answers)
 		const buttons = answers.map(answer => {
 					return (
 						<div>
 						   <input type='radio' 
-						   		  id={answer} 
-						   		  value={answer}
+						   		  id={answer.answer} 
+						   		  value={answer.answer}
 						   		  onClick={this.handleChecked}
-						   		  checked={this.state.isClicked === answer} 
+						   		  checked={this.state.isClicked === answer.answer} 
 						   	/> 
-						   <label for={answer}>{answer}</label>
+						   <label for={answer.answer}>{answer.answer}</label>
 						</div>
 					)
 				})
@@ -39,8 +43,6 @@ class TriviaCard extends Component {
 	  }  
 	}
 
-const mapDispatchToProps = (dispatch) => ({
-	addScore: (score) => dispatch(addScore(score))
-})
 
-export default connect(null, mapDispatchToProps)(TriviaCard);
+
+export default TriviaCard;
