@@ -24,6 +24,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
+        <link href="https://fonts.googleapis.com/css?family=Kodchasan" rel="stylesheet" />
           <h1>Activist Trivia</h1>
           <NavBar fetchCategory={ this.fetchCategory }/>
         </header>
