@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, withRouter, NavLink } from 'react-router-dom';
 import TriviaCard from '../TriviaCard/TriviaCard';
 import './Game.css';
 import ScorePage from '../ScorePage/ScorePage';
@@ -17,6 +17,7 @@ class Game extends Component {
 		const score = this.props.answers.filter(answer => answer)
 		const finalScore = score.length
 		this.props.addScore(finalScore)
+		this.props.history.push('/score')
 	}
 
 	render() {
@@ -24,8 +25,11 @@ class Game extends Component {
 		return (
 			<div>
 				{this.displayQuestions()}
-				<button onClick={this.handleSubmit}>Submit</button>
-				<ScorePage score={this.props.score} />
+				{/*<NavLink to='/score'>*/}
+					<button
+						onClick={this.handleSubmit}>Submit
+					</button>
+				{/*</NavLink>*/}
 			</div>
 		)
 	} else {
@@ -46,4 +50,4 @@ export const mapDispatchToProps = (dispatch) => ({
 	addScore: (score) => dispatch(addScore(score))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(Game);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Game));

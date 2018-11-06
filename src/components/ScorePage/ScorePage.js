@@ -1,5 +1,6 @@
 import React from 'react';
 import './ScorePage.css';
+import { connect } from 'react-redux';
 
 const ScorePage = (props) => {
 	return (
@@ -9,4 +10,8 @@ const ScorePage = (props) => {
 	)
 }
 
-export default ScorePage;
+export const mapStateToProps = (state) => ({
+	score: state.score
+})
+
+export default connect(mapStateToProps)(ScorePage);

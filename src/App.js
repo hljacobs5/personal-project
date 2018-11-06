@@ -8,6 +8,7 @@ import { addQuestions, addScore } from './actions';
 import Game from './components/Game/Game.js';
 import Home from './components/Home/Home.js';
 import NavBar from './components/NavBar/NavBar.js';
+import ScorePage from './components/ScorePage/ScorePage.js';
 
 class App extends Component {
   async componentDidMount() {
@@ -27,7 +28,7 @@ class App extends Component {
           <NavBar fetchCategory={ this.fetchCategory }/>
         </header>
         <main>  
-          <Home />       
+          <Route exact path='/' component={Home} />      
           <Route exact path='/politics' render={() => <Game 
             questions={ this.props.questions } />
           }/>
@@ -37,6 +38,8 @@ class App extends Component {
           <Route exact path='/environment' render={() => <Game
             questions={ this.props.questions } />
           }/>
+          <Route exact path='/score' 
+          render={() => <ScorePage score={this.props.score}/>} />
         </main>
       </div>
     );

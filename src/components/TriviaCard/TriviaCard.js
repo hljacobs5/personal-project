@@ -21,7 +21,6 @@ class TriviaCard extends Component {
 		const correctAnswer = this.props.result.correct_answer
 		const incorrectAnswers = this.props.result.incorrect_answers
 		const answers = cleanAnswers(correctAnswer, incorrectAnswers)
-		console.log(answers)
 		const buttons = answers.map(answer => {
 			return (
 				<div>

@@ -16,5 +16,4 @@ export const cleanAnswers = (correctAnswer, incorrectAnswers) => {
 	const randomIndice = Math.floor(Math.random() * Math.floor(cleanIncorrectAnswers.length - 2))
 	cleanIncorrectAnswers.splice(randomIndice, 0, cleanCorrectAnswer)
 	return cleanIncorrectAnswers
-
 }
