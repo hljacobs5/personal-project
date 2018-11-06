@@ -23,7 +23,7 @@ class TriviaCard extends Component {
 		const answers = cleanAnswers(correctAnswer, incorrectAnswers)
 		const buttons = answers.map(answer => {
 			return (
-				<div>
+				<div className='radio-button'>
 				   <input type='radio' 
 				   		  id={answer.answer} 
 				   		  value={answer.answer}
@@ -37,7 +37,7 @@ class TriviaCard extends Component {
 
 		return (
 			<div>
-				<h2>{this.props.result.question}</h2>
+				<h2 className='questions'>{this.props.result.question}</h2>
 				<div className='buttons'>{buttons}</div>	
 			</div>
 		)

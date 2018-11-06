@@ -25,11 +25,9 @@ class Game extends Component {
 		return (
 			<div>
 				{this.displayQuestions()}
-				{/*<NavLink to='/score'>*/}
 					<button
 						onClick={this.handleSubmit}>Submit
 					</button>
-				{/*</NavLink>*/}
 			</div>
 		)
 	} else {
