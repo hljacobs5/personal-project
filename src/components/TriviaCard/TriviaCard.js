@@ -18,11 +18,9 @@ class TriviaCard extends Component {
 	}
 
 	render() {
-
 		const correctAnswer = this.props.result.correct_answer
 		const incorrectAnswers = this.props.result.incorrect_answers
 		const answers = cleanAnswers(correctAnswer, incorrectAnswers)
-		console.log(answers)
 		const buttons = answers.map(answer => {
 			return (
 				<div>
@@ -35,7 +33,7 @@ class TriviaCard extends Component {
 				   <label for={answer.answer}>{answer.answer}</label>
 				</div>
 			)
-		}).sort()
+		})
 
 		return (
 			<div>
