@@ -1,5 +1,4 @@
 export const answerReducer = (state = [], action) => {
-	console.log(action)
 	switch(action.type) {
 		case 'SUBMIT_ANSWERS':
 			return [...state, action.answers]
