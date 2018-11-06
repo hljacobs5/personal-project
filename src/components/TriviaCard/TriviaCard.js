@@ -1,49 +1,54 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import './TriviaCard.css';
+import { connect } from 'react-redux';
+import { cleanAnswers } from '../../utilities/helper.js';
+import { submitAnswers } from '../../actions';
 
 class TriviaCard extends Component {
 	constructor(props) {
 		super();
 		this.state = {
-			isChecked: ''
+			isClicked: ''
 		}
 	}
 
-	handleChecked = (changeEvent) => {
-		this.setState({ isClicked: changeEvent.target.value })
-
-		// if (this.state.isClicked) {
-		// 	this
-		// }
+	handleChecked = (event, answer) => {
+		this.setState({ isClicked: event.target.value })
+		this.props.submitAnswers(answer)
 	}
 
 	render() {
-	const answers = [this.props.result.correct_answer, ...this.props.result.incorrect_answers]
-	const buttons = answers.map(answer => {
-				return (
-					<div>
-					   <input type='radio' 
-					   		  id={answer} 
-					   		  value={answer}
-					   		  onClick={this.handleChecked}
-					   		  checked={this.state.isClicked === answer} 
-					   	/> 
-					   <label for={answer}>{answer}</label>
-					</div>
-				)
-			})
 
-	return (
-		<div>{/*
-			<Link to={`/${props.id}`} className='category'></Link>*/}
-			<h2>{this.props.result.question}</h2>
-			<div className='buttons'>{buttons}</div>	
-		</div>
-	)
+		const correctAnswer = this.props.result.correct_answer
+		const incorrectAnswers = this.props.result.incorrect_answers
+		const answers = cleanAnswers(correctAnswer, incorrectAnswers)
+		console.log(answers)
+		const buttons = answers.map(answer => {
+			return (
+				<div>
+				   <input type='radio' 
+				   		  id={answer.answer} 
+				   		  value={answer.answer}
+				   		  onClick={(e) => this.handleChecked(e, answer.correct)}
+				   		  checked={this.state.isClicked === answer.answer} 
+				   	/> 
+				   <label for={answer.answer}>{answer.answer}</label>
+				</div>
+			)
+		}).sort()
+
+		return (
+			<div>
+				<h2>{this.props.result.question}</h2>
+				<div className='buttons'>{buttons}</div>	
+			</div>
+		)
+	  }  
 	}
-	
-  
-}
 
-export default TriviaCard;
+export const mapDispatchToProps = (dispatch) => ({
+	submitAnswers: (answer) => dispatch(submitAnswers(answer))
+})
+
+
+export default connect(null, mapDispatchToProps)(TriviaCard);

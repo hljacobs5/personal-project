@@ -3,19 +3,21 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import TriviaCard from '../TriviaCard/TriviaCard';
 import './Game.css';
+import ScorePage from '../ScorePage/ScorePage';
+import { addScore } from '../../actions';
 
 class Game extends Component {
 	displayQuestions = () => {
-		// if (this.props.pathname === '/politics') {
 		return this.props.questions.results.map(result => {
-			return <TriviaCard result={result}/>
-		})
-	  // } 
+			return <TriviaCard result={result} />
+		}) 
 	}
 
-	// handleSubmit() {
-
-	// }
+	handleSubmit = () => {
+		const score = this.props.answers.filter(answer => answer)
+		const finalScore = score.length
+		this.props.addScore(finalScore)
+	}
 
 	render() {
 		if (this.props.questions.results) {
@@ -23,21 +25,25 @@ class Game extends Component {
 			<div>
 				{this.displayQuestions()}
 				<button onClick={this.handleSubmit}>Submit</button>
+				<ScorePage score={this.props.score} />
 			</div>
 		)
 	} else {
 		return (
-			<div>
-				<h3>Not loaded</h3>
-			</div>
-		)
+			null
+	  )
 	}
   } 
 }
 
 export const mapStateToProps = (state) => ({
 	questions: state.questions,
+	score: state.score,
 	answers: state.answers
 })
 
-export default connect(mapStateToProps)(Game);
+export const mapDispatchToProps = (dispatch) => ({
+	addScore: (score) => dispatch(addScore(score))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Game);

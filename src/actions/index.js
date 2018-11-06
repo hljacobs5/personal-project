@@ -3,13 +3,12 @@ export const addQuestions = questions => ({
 	questions
 })
 
-export const addAnswers = answers => ({
-	type: 'ADD_ANSWERS',
-	answers
+export const addScore = score => ({
+	type: 'ADD_SCORE',
+	score
 })
 
-export const scoreAnswers = (userInput, answers) => ({
-	type: 'SCORE_ANSWERS',
-	answers,
-	userInput
+export const submitAnswers = answers => ({
+	type: 'SUBMIT_ANSWERS',
+	answers
 })
