@@ -3,7 +3,6 @@ import './App.css';
 import { NavLink, Route, withRouter, Switch } from 'react-router-dom';
 import TriviaControls from './components/TriviaControls/TriviaControls.js';
 import { fetchData } from './utilities/apiCalls.js';
-// import { triviaCleaner } from './utilities/helper.js';
 import { connect } from 'react-redux';
 import { addQuestions, addScore } from './actions';
 import Game from './components/Game/Game.js';
@@ -13,7 +12,6 @@ import NavBar from './components/NavBar/NavBar.js';
 class App extends Component {
   async componentDidMount() {
     const data = await fetchData()
-    // triviaCleaner(data)
   }
 
  fetchCategory = async (event) => {

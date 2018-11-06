@@ -7,3 +7,8 @@ export const addScore = score => ({
 	type: 'ADD_SCORE',
 	score
 })
+
+export const submitAnswers = answers => ({
+	type: 'SUBMIT_ANSWERS',
+	answers
+})
