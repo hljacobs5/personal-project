@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { NavLink, Route, withRouter, Switch } from 'react-router-dom';
+import { NavLink, Route } from 'react-router-dom';
 import TriviaControls from './components/TriviaControls/TriviaControls.js';
 import { fetchData } from './utilities/apiCalls.js';
 import { connect } from 'react-redux';
@@ -24,10 +24,10 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1>Activist Trivia</h1>
-          <Home />
-        </header>
           <NavBar fetchCategory={ this.fetchCategory }/>
-        <main>         
+        </header>
+        <main>  
+          <Home />       
           <Route exact path='/politics' render={() => <Game 
             questions={ this.props.questions } />
           }/>
