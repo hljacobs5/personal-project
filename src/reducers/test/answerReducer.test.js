@@ -7,26 +7,17 @@ describe("answerReducer", () => {
     expect(result).toEqual(expected);
   });
 
-  it("should submit answers array", () => {
-    const mockAnswersArray = [
-      {answer: "Theresa May", correct: true},
-      {answer: "Boris Johnson", correct: false},
-      {answer: "David Cameron", correct: false},
-      {answer: "Tony Blair", correct: false}
-    ];
+  it("should add answers to array", () => {
+    const mockAnswer = true;
+      
 
     const mockState = [];
 
-    const expected = [
-      {answer: "Theresa May", correct: true},
-      {answer: "Boris Johnson", correct: false},
-      {answer: "David Cameron", correct: false},
-      {answer: "Tony Blair", correct: false}
-    ];
+    const expected = [true];
 
     const action = {
       type: 'SUBMIT_ANSWERS',
-      answers: mockAnswersArray
+      answers: mockAnswer
     };
 
     const result = answerReducer(mockState, action);

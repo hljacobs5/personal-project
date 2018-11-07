@@ -5,13 +5,13 @@ import NavBar from './NavBar.js';
 
 describe('NavBar', () => {
 	let wrapper;
+	let mockFunction;
 	let mockFetchCategory;
-
 	beforeEach(() => {
 		mockFunction = jest.fn()
 		wrapper = shallow(<NavBar
-			fetchCategory={mockFunction}
-			/>);
+			mockFetchCategory={mockFunction}
+		>);
 	});
 
 	it('should match snapshot', () => {
@@ -20,16 +20,19 @@ describe('NavBar', () => {
 
 	it('should call fetchCategory when politics is clicked', () => {
 		wrapper.find('.politics').simulate('click')
+		wrapper.instance().fetchCategory = mockFetchCategory
 		expect(mockFunction).toBeCalled()
 	});
 
 	it('should call fetchCategory when animals is clicked', () => {
 		wrapper.find('.animals').simulate('click')
+		wrapper.instance().fetchCategory = mockFetchCategory
 		expect(mockFunction).toBeCalled()
 	});
 
 	it('should call fetchCategory when environment is clicked', () => {
 		wrapper.find('.environment').simulate('click')
+		wrapper.instance().fetchCategory = mockFetchCategory
 		expect(mockFunction).toBeCalled()
 	});
 });

@@ -4,7 +4,7 @@ exports[`NavBar should match snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <NavBar
-    fetchCategory={[MockFunction]}
+    mockFetchCategory={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -30,7 +30,6 @@ ShallowWrapper {
           <button
             id="24"
             name="politics"
-            onClick={[MockFunction]}
           >
             Politics
           </button>
@@ -45,7 +44,6 @@ ShallowWrapper {
           <button
             id="27"
             name="animals"
-            onClick={[MockFunction]}
           >
             Animals
           </button>
@@ -60,7 +58,6 @@ ShallowWrapper {
           <button
             id="17"
             name="animals"
-            onClick={[MockFunction]}
           >
             Environment
           </button>
@@ -79,7 +76,6 @@ ShallowWrapper {
           "children": <button
             id="24"
             name="politics"
-            onClick={[MockFunction]}
           >
             Politics
           </button>,
@@ -96,7 +92,7 @@ ShallowWrapper {
             "children": "Politics",
             "id": "24",
             "name": "politics",
-            "onClick": [MockFunction],
+            "onClick": undefined,
           },
           "ref": null,
           "rendered": "Politics",
@@ -114,7 +110,6 @@ ShallowWrapper {
           "children": <button
             id="27"
             name="animals"
-            onClick={[MockFunction]}
           >
             Animals
           </button>,
@@ -131,7 +126,7 @@ ShallowWrapper {
             "children": "Animals",
             "id": "27",
             "name": "animals",
-            "onClick": [MockFunction],
+            "onClick": undefined,
           },
           "ref": null,
           "rendered": "Animals",
@@ -149,7 +144,6 @@ ShallowWrapper {
           "children": <button
             id="17"
             name="animals"
-            onClick={[MockFunction]}
           >
             Environment
           </button>,
@@ -166,7 +160,7 @@ ShallowWrapper {
             "children": "Environment",
             "id": "17",
             "name": "animals",
-            "onClick": [MockFunction],
+            "onClick": undefined,
           },
           "ref": null,
           "rendered": "Environment",
@@ -194,7 +188,6 @@ ShallowWrapper {
             <button
               id="24"
               name="politics"
-              onClick={[MockFunction]}
             >
               Politics
             </button>
@@ -209,7 +202,6 @@ ShallowWrapper {
             <button
               id="27"
               name="animals"
-              onClick={[MockFunction]}
             >
               Animals
             </button>
@@ -224,7 +216,6 @@ ShallowWrapper {
             <button
               id="17"
               name="animals"
-              onClick={[MockFunction]}
             >
               Environment
             </button>
@@ -243,7 +234,6 @@ ShallowWrapper {
             "children": <button
               id="24"
               name="politics"
-              onClick={[MockFunction]}
             >
               Politics
             </button>,
@@ -260,7 +250,7 @@ ShallowWrapper {
               "children": "Politics",
               "id": "24",
               "name": "politics",
-              "onClick": [MockFunction],
+              "onClick": undefined,
             },
             "ref": null,
             "rendered": "Politics",
@@ -278,7 +268,6 @@ ShallowWrapper {
             "children": <button
               id="27"
               name="animals"
-              onClick={[MockFunction]}
             >
               Animals
             </button>,
@@ -295,7 +284,7 @@ ShallowWrapper {
               "children": "Animals",
               "id": "27",
               "name": "animals",
-              "onClick": [MockFunction],
+              "onClick": undefined,
             },
             "ref": null,
             "rendered": "Animals",
@@ -313,7 +302,6 @@ ShallowWrapper {
             "children": <button
               id="17"
               name="animals"
-              onClick={[MockFunction]}
             >
               Environment
             </button>,
@@ -330,7 +318,7 @@ ShallowWrapper {
               "children": "Environment",
               "id": "17",
               "name": "animals",
-              "onClick": [MockFunction],
+              "onClick": undefined,
             },
             "ref": null,
             "rendered": "Environment",

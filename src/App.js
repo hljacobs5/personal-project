@@ -14,7 +14,7 @@ class App extends Component {
     const data = await fetchData()
   }
 
- fetchCategory = async (event) => {
+  fetchCategory = async (event) => {
     const data = await fetchData(event.target.id)
     this.props.addQuestions(data)
   }

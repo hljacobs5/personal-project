@@ -18,10 +18,7 @@ describe('TriviaCard', () => {
 				result={result}
 			/>)
 	})
-	
-	it('should exist', () => {
-		expect(wrapper).toBeDefined();
-	})
+
 
 	it('should render like snapshot', () => {
 		expect(wrapper).toMatchSnapshot();

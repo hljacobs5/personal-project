@@ -14,6 +14,7 @@ export class TriviaCard extends Component {
 
 	handleChecked = (event, answer) => {
 		this.setState({ isClicked: event.target.value })
+		console.log(answer)
 		this.props.submitAnswers(answer)
 	}
 
