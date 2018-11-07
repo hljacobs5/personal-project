@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './NavBar.css';
 import { Route, NavLink } from 'react-router-dom';
 
-const NavBar = ({ fetchCategory }) => {
+export const NavBar = ({ fetchCategory }) => {
 	return (
 		<div>
 			<NavLink
