@@ -1,5 +1,15 @@
 # Activist Trivia
 
+Activist Trivia is a trivia game created to help political, animal, and evironmental activists to learn more about their specified interest. I
+
+### API's Used
+Open Trivia API (opentdb.com)
+
+### JavaScript Technologies Used
+React
+Redux
+React Router
+
 ## Product
 ### Home Page
 ![alt text](https://github.com/hljacobs5/personal-project/blob/master/Screen%20Shot%202018-11-07%20at%2010.44.46%20AM.png)
