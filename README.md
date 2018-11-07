@@ -1,6 +1,6 @@
 # Activist Trivia
 
-Activist Trivia is a trivia game created to help political, animal, and evironmental activists to learn more about their interest. 
+Activist Trivia is a trivia game created to help political, animal, and evironmental activists learn more about their interest. 
 
 ### API's Used
 * Open Trivia API (opentdb.com)
