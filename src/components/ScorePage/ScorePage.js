@@ -5,7 +5,8 @@ import { connect } from 'react-redux';
 const ScorePage = (props) => {
 	return (
 		<div>
-			<h1>{props.score}/10</h1>
+			<h1 className='score'>{props.score}/10</h1>
+			<button>Home</button>
 		</div>
 	)
 }

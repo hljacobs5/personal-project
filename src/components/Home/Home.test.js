@@ -1,28 +1,15 @@
 import React from 'react';
+import { shallow, mount } from 'enzyme';
+import { Home } from './Home'
 
-const Home = () => {
-	return(
-		<div>
-			
-	)
-}
+describe('Home', () => {
+	let wrapper;
 
+	it('should exist', () => {
+		expect(wrapper).toBeDefined();
+	})
 
-
-
-
-
-
-
-import React from 'react';
-
-const Home = () => {
-	return (
-		<div>
-		  <h1>Welcome!</h1>
-		  <h4>Click on the links above to see a variety of creatures</h4>
-		</div>
-	)
-}
-
-export default Home
+	it('should render like snapshot', () => {
+		expect(wrapper).toMatchSnapshot();
+	})
+})

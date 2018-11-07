@@ -2,16 +2,17 @@
 	display: flex;
     justify-content: space-around;
     flex-direction: column;
+    border-radius: 12px;
     /* margin: auto; */
     /*margin-left: 0%;*/
 }
 
 .radio-button {
-font-family: 'Kodchasan', sans-serif;
+	font-family: 'Kodchasan', sans-serif;
  	color: #6796A3;
 }
 
 .questions {
-font-family: 'Kodchasan', sans-serif;
+	font-family: 'Kodchasan', sans-serif;
  	color: #407888;
 }
