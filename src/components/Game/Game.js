@@ -6,7 +6,7 @@ import './Game.css';
 import ScorePage from '../ScorePage/ScorePage';
 import { addScore } from '../../actions';
 
-class Game extends Component {
+export class Game extends Component {
 	displayQuestions = () => {
 		return this.props.questions.results.map(result => {
 			return <TriviaCard result={result} />

@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 
-import NavBar from './NavBar.js'
+import NavBar from './NavBar.js';
 
 describe('NavBar', () => {
 	let wrapper;
-	let mockFunction;
+	let mockFetchCategory;
 
 	beforeEach(() => {
 		mockFunction = jest.fn()

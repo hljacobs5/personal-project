@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { cleanAnswers } from '../../utilities/helper.js';
 import { submitAnswers } from '../../actions';
 
-class TriviaCard extends Component {
+export class TriviaCard extends Component {
 	constructor(props) {
 		super();
 		this.state = {

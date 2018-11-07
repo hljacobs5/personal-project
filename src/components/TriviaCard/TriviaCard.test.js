@@ -5,12 +5,17 @@ import { TriviaCard, mapStateToProps, mapDispatchToProps } from './TriviaCard';
 describe('TriviaCard', () => {
 	let wrapper;
 	let mockHandleChecked;
+	let result = {
+		correct_answer: 'answer',
+		incorrect_answers: ['answer2', 'answer3', 'answer4']
+	}
 
 	beforeEach(() => {
 		mockHandleChecked = jest.fn();
 		wrapper = shallow(
 			<TriviaCard 
 				isClicked={''}
+				result={result}
 			/>)
 	})
 	
@@ -22,10 +27,10 @@ describe('TriviaCard', () => {
 		expect(wrapper).toMatchSnapshot();
 	})
 
-	// describe('handleChecked', () => {
-	// 	it('should update state of isClicked', () => {
-
-	// 	})
-	// })
+	describe('handleChecked', () => {
+		it('should update state of isClicked', () => {
+			
+		})
+	})
 })
 

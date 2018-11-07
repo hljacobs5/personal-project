@@ -1,3 +1,819 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TriviaCard should render like snapshot 1`] = `undefined`;
+exports[`TriviaCard should render like snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <TriviaCard
+    isClicked=""
+    result={
+      Object {
+        "correct_answer": "answer",
+        "incorrect_answers": Array [
+          "answer2",
+          "answer3",
+          "answer4",
+        ],
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2
+          className="questions"
+        />,
+        <div
+          className="buttons"
+        >
+          <div
+            className="radio-button"
+          >
+            <input
+              checked={false}
+              id="answer"
+              onClick={[Function]}
+              type="radio"
+              value="answer"
+            />
+            <label
+              for="answer"
+            >
+              answer
+            </label>
+          </div>
+          <div
+            className="radio-button"
+          >
+            <input
+              checked={false}
+              id="answer2"
+              onClick={[Function]}
+              type="radio"
+              value="answer2"
+            />
+            <label
+              for="answer2"
+            >
+              answer2
+            </label>
+          </div>
+          <div
+            className="radio-button"
+          >
+            <input
+              checked={false}
+              id="answer3"
+              onClick={[Function]}
+              type="radio"
+              value="answer3"
+            />
+            <label
+              for="answer3"
+            >
+              answer3
+            </label>
+          </div>
+          <div
+            className="radio-button"
+          >
+            <input
+              checked={false}
+              id="answer4"
+              onClick={[Function]}
+              type="radio"
+              value="answer4"
+            />
+            <label
+              for="answer4"
+            >
+              answer4
+            </label>
+          </div>
+        </div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": undefined,
+          "className": "questions",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="radio-button"
+            >
+              <input
+                checked={false}
+                id="answer"
+                onClick={[Function]}
+                type="radio"
+                value="answer"
+              />
+              <label
+                for="answer"
+              >
+                answer
+              </label>
+            </div>,
+            <div
+              className="radio-button"
+            >
+              <input
+                checked={false}
+                id="answer2"
+                onClick={[Function]}
+                type="radio"
+                value="answer2"
+              />
+              <label
+                for="answer2"
+              >
+                answer2
+              </label>
+            </div>,
+            <div
+              className="radio-button"
+            >
+              <input
+                checked={false}
+                id="answer3"
+                onClick={[Function]}
+                type="radio"
+                value="answer3"
+              />
+              <label
+                for="answer3"
+              >
+                answer3
+              </label>
+            </div>,
+            <div
+              className="radio-button"
+            >
+              <input
+                checked={false}
+                id="answer4"
+                onClick={[Function]}
+                type="radio"
+                value="answer4"
+              />
+              <label
+                for="answer4"
+              >
+                answer4
+              </label>
+            </div>,
+          ],
+          "className": "buttons",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <input
+                  checked={false}
+                  id="answer"
+                  onClick={[Function]}
+                  type="radio"
+                  value="answer"
+                />,
+                <label
+                  for="answer"
+                >
+                  answer
+                </label>,
+              ],
+              "className": "radio-button",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "checked": false,
+                  "id": "answer",
+                  "onClick": [Function],
+                  "type": "radio",
+                  "value": "answer",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "answer",
+                  "for": "answer",
+                },
+                "ref": null,
+                "rendered": "answer",
+                "type": "label",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <input
+                  checked={false}
+                  id="answer2"
+                  onClick={[Function]}
+                  type="radio"
+                  value="answer2"
+                />,
+                <label
+                  for="answer2"
+                >
+                  answer2
+                </label>,
+              ],
+              "className": "radio-button",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "checked": false,
+                  "id": "answer2",
+                  "onClick": [Function],
+                  "type": "radio",
+                  "value": "answer2",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "answer2",
+                  "for": "answer2",
+                },
+                "ref": null,
+                "rendered": "answer2",
+                "type": "label",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <input
+                  checked={false}
+                  id="answer3"
+                  onClick={[Function]}
+                  type="radio"
+                  value="answer3"
+                />,
+                <label
+                  for="answer3"
+                >
+                  answer3
+                </label>,
+              ],
+              "className": "radio-button",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "checked": false,
+                  "id": "answer3",
+                  "onClick": [Function],
+                  "type": "radio",
+                  "value": "answer3",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "answer3",
+                  "for": "answer3",
+                },
+                "ref": null,
+                "rendered": "answer3",
+                "type": "label",
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <input
+                  checked={false}
+                  id="answer4"
+                  onClick={[Function]}
+                  type="radio"
+                  value="answer4"
+                />,
+                <label
+                  for="answer4"
+                >
+                  answer4
+                </label>,
+              ],
+              "className": "radio-button",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "checked": false,
+                  "id": "answer4",
+                  "onClick": [Function],
+                  "type": "radio",
+                  "value": "answer4",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "input",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "answer4",
+                  "for": "answer4",
+                },
+                "ref": null,
+                "rendered": "answer4",
+                "type": "label",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2
+            className="questions"
+          />,
+          <div
+            className="buttons"
+          >
+            <div
+              className="radio-button"
+            >
+              <input
+                checked={false}
+                id="answer"
+                onClick={[Function]}
+                type="radio"
+                value="answer"
+              />
+              <label
+                for="answer"
+              >
+                answer
+              </label>
+            </div>
+            <div
+              className="radio-button"
+            >
+              <input
+                checked={false}
+                id="answer2"
+                onClick={[Function]}
+                type="radio"
+                value="answer2"
+              />
+              <label
+                for="answer2"
+              >
+                answer2
+              </label>
+            </div>
+            <div
+              className="radio-button"
+            >
+              <input
+                checked={false}
+                id="answer3"
+                onClick={[Function]}
+                type="radio"
+                value="answer3"
+              />
+              <label
+                for="answer3"
+              >
+                answer3
+              </label>
+            </div>
+            <div
+              className="radio-button"
+            >
+              <input
+                checked={false}
+                id="answer4"
+                onClick={[Function]}
+                type="radio"
+                value="answer4"
+              />
+              <label
+                for="answer4"
+              >
+                answer4
+              </label>
+            </div>
+          </div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+            "className": "questions",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="radio-button"
+              >
+                <input
+                  checked={false}
+                  id="answer"
+                  onClick={[Function]}
+                  type="radio"
+                  value="answer"
+                />
+                <label
+                  for="answer"
+                >
+                  answer
+                </label>
+              </div>,
+              <div
+                className="radio-button"
+              >
+                <input
+                  checked={false}
+                  id="answer2"
+                  onClick={[Function]}
+                  type="radio"
+                  value="answer2"
+                />
+                <label
+                  for="answer2"
+                >
+                  answer2
+                </label>
+              </div>,
+              <div
+                className="radio-button"
+              >
+                <input
+                  checked={false}
+                  id="answer3"
+                  onClick={[Function]}
+                  type="radio"
+                  value="answer3"
+                />
+                <label
+                  for="answer3"
+                >
+                  answer3
+                </label>
+              </div>,
+              <div
+                className="radio-button"
+              >
+                <input
+                  checked={false}
+                  id="answer4"
+                  onClick={[Function]}
+                  type="radio"
+                  value="answer4"
+                />
+                <label
+                  for="answer4"
+                >
+                  answer4
+                </label>
+              </div>,
+            ],
+            "className": "buttons",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <input
+                    checked={false}
+                    id="answer"
+                    onClick={[Function]}
+                    type="radio"
+                    value="answer"
+                  />,
+                  <label
+                    for="answer"
+                  >
+                    answer
+                  </label>,
+                ],
+                "className": "radio-button",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "checked": false,
+                    "id": "answer",
+                    "onClick": [Function],
+                    "type": "radio",
+                    "value": "answer",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "answer",
+                    "for": "answer",
+                  },
+                  "ref": null,
+                  "rendered": "answer",
+                  "type": "label",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <input
+                    checked={false}
+                    id="answer2"
+                    onClick={[Function]}
+                    type="radio"
+                    value="answer2"
+                  />,
+                  <label
+                    for="answer2"
+                  >
+                    answer2
+                  </label>,
+                ],
+                "className": "radio-button",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "checked": false,
+                    "id": "answer2",
+                    "onClick": [Function],
+                    "type": "radio",
+                    "value": "answer2",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "answer2",
+                    "for": "answer2",
+                  },
+                  "ref": null,
+                  "rendered": "answer2",
+                  "type": "label",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <input
+                    checked={false}
+                    id="answer3"
+                    onClick={[Function]}
+                    type="radio"
+                    value="answer3"
+                  />,
+                  <label
+                    for="answer3"
+                  >
+                    answer3
+                  </label>,
+                ],
+                "className": "radio-button",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "checked": false,
+                    "id": "answer3",
+                    "onClick": [Function],
+                    "type": "radio",
+                    "value": "answer3",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "answer3",
+                    "for": "answer3",
+                  },
+                  "ref": null,
+                  "rendered": "answer3",
+                  "type": "label",
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <input
+                    checked={false}
+                    id="answer4"
+                    onClick={[Function]}
+                    type="radio"
+                    value="answer4"
+                  />,
+                  <label
+                    for="answer4"
+                  >
+                    answer4
+                  </label>,
+                ],
+                "className": "radio-button",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "checked": false,
+                    "id": "answer4",
+                    "onClick": [Function],
+                    "type": "radio",
+                    "value": "answer4",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "answer4",
+                    "for": "answer4",
+                  },
+                  "ref": null,
+                  "rendered": "answer4",
+                  "type": "label",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

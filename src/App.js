@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import { NavLink, Route } from 'react-router-dom';
-import TriviaControls from './components/TriviaControls/TriviaControls.js';
 import { fetchData } from './utilities/apiCalls.js';
 import { connect } from 'react-redux';
 import { addQuestions, addScore } from './actions';
