@@ -5,11 +5,20 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Game
     addScore={[MockFunction]}
-    answers={Array []}
+    answers={
+      Array [
+        "true",
+        "true",
+        "false",
+      ]
+    }
     history={Array []}
     questions={
       Object {
-        "results": Array [],
+        "results": Array [
+          "true",
+          "false",
+        ],
       }
     }
   />,
@@ -27,7 +36,14 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        Array [],
+        Array [
+          <Connect(TriviaCard)
+            result="true"
+          />,
+          <Connect(TriviaCard)
+            result="false"
+          />,
+        ],
         <button
           onClick={[Function]}
         >
@@ -37,6 +53,28 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "result": "true",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "result": "false",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -59,7 +97,14 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          Array [],
+          Array [
+            <Connect(TriviaCard)
+              result="true"
+            />,
+            <Connect(TriviaCard)
+              result="false"
+            />,
+          ],
           <button
             onClick={[Function]}
           >
@@ -69,6 +114,28 @@ ShallowWrapper {
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "result": "true",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "result": "false",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
         Object {
           "instance": null,
           "key": undefined,

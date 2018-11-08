@@ -6,11 +6,12 @@ describe('Game', () => {
 	let wrapper;
 
 	beforeEach(() => {
-		const mockQuestions = { results: []}
+		const mockQuestions = { results: ['true', 'false']}
 		wrapper = shallow(<Game questions={mockQuestions}
-								answers={[]}
+								answers={['true', 'true', 'false']}
 								addScore={jest.fn()}
-								history={[]}/>)
+								history={[]}
+						  />)
 	})
 
 	it('should exist', () => {
@@ -21,11 +22,24 @@ describe('Game', () => {
 		expect(wrapper).toMatchSnapshot();
 	})
 
-	it('should call handleSubmit on button click', () => {
-		let mockHandleSubmit = jest.fn()
-		wrapper.instance().handleSubmit = mockHandleSubmit
-		wrapper.instance().forceUpdate()
-		wrapper.find('button').simulate('click')
-		expect(mockHandleSubmit).toHaveBeenCalled()
+
+	describe('handleSubmit', () => {
+    	const mockEvent = { preventDefault: jest.fn() };
+
+		it('should call handleSubmit on button click', () => {
+			let mockHandleSubmit = jest.fn()
+			wrapper.instance().handleSubmit = mockHandleSubmit
+			wrapper.instance().forceUpdate()
+			wrapper.find('button').simulate('click')
+			expect(mockHandleSubmit).toHaveBeenCalled()
+		})
+
+		it('should call addScore under the right conditions', () => {
+		
+			wrapper.find('button').simulate('click')
+			wrapper.instance().handleSubmit(mockEvent)
+
+			expect(wrapper.instance().props.addScore).toHaveBeenCalled()
+		})
 	})
 })
